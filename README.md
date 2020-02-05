@@ -2,7 +2,7 @@
 ***
 In this project you will be creating a Expense Management System backend with RESTful APIs connected to a database. The project is divided in two parts. User APIs and Wallet APIs and you are required to create a schema for backend database where all the data will be stored. 
 
-Aim of this project is to help you think about how to design backend systems and develop a prototype based on the design. You should plan to develop this project in the language and database which are more inline with your project choice. You are also not allowed to use any third party libraries without getting an approval from your instructor.
+Aim of this project is to help you think about how to design backend systems and develop a prototype based on the design. You should plan to develop this project in a language and database which are more inline with your project choice. 
 
 #### List of APIs: 
 1. User APIs:
