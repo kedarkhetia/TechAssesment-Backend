@@ -7,6 +7,7 @@ Aim of this project is to help you think about how to design backend systems and
 #### List of APIs: 
 1. User APIs:
    * Registration
+   
    Register user is a simple registration API. However, you should not allow duplicate users and must use [salting techniques](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/) to store the password in the database, you should also consider validating the email address.
     ```    
         HTTP Method: POST
@@ -25,6 +26,7 @@ Aim of this project is to help you think about how to design backend systems and
         Any other error: 400 Bad Request
     ```
    * Login
+   
    User will use this api to login to the system. The API should return a session token as response. This session token will be used to query further APIs and identifying the user. From here on, for all the below APIs (i.e. from Logout), session-token must be passed in `Authorization` header in the request. To know more read about token based authentication.
     ```    
         HTTP Method: POST
@@ -43,6 +45,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
    * Logout
+   
    User will use this api to logout of the system.
    ```    
         HTTP Method: POST
@@ -56,6 +59,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
    * Change Password
+   
    User will call this api to change their id and password. As a extra step of verification, you should also verify that the old-password is actually the current password of the logged in user.
     ```    
         HTTP Method: PUT
@@ -75,6 +79,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
     * Show User Profile
+    
     Displays user profile with average spending and remaining balance.
     ```    
         HTTP Method: GET
@@ -91,6 +96,7 @@ Aim of this project is to help you think about how to design backend systems and
     ```
 2. Wallet APIs:
     * Add Expense
+    
     User will use this API to add an expense to his wallet. You should not allow user to add an expense if they do not have minimum balance. 
     ```    
         HTTP Method: POST
@@ -112,6 +118,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
     * Delete Expense
+    
     User can delete the expense using this API. User should not be allowed to delete an expense if the expense-id doesn't exist in the database.
     ```    
         HTTP Method: DELETE
@@ -144,6 +151,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
     * View Expense
+    
     User can view perticular expense using this API.
     ```    
         HTTP Method: GET
@@ -163,6 +171,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
     * Add Money
+    
     User can add money to their wallet using this API.
     ```    
         HTTP Method: POST
@@ -179,6 +188,7 @@ Aim of this project is to help you think about how to design backend systems and
         }
     ```
     * Get expenses between two dates.
+    
     Display the list of expenses that were done between the two dates provided (including both start and end dates).
     ```
         HTTP Method: GET
